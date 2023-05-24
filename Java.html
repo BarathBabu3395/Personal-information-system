@@ -1,0 +1,41 @@
+const schedule = {
+
+  Monday: ["8:00 AM - Wake up", "8:30 AM - Breakfast", "9:00 AM - Work", "12:30 PM - Lunch", "1:30 PM - Meetings", "5:00 PM - Exercise", "7:00 PM - Dinner", "8:00 PM - Relaxation", "10:00 PM - Bedtime"],
+
+  Tuesday: ["8:00 AM - Wake up", "8:30 AM - Breakfast", "9:00 AM - Work", "12:30 PM - Lunch", "1:30 PM - Meetings", "5:00 PM - Exercise", "7:00 PM - Dinner", "8:00 PM - Hobbies", "10:00 PM - Bedtime"],
+
+  Wednesday: ["8:00 AM - Wake up", "8:30 AM - Breakfast", "9:00 AM - Work", "12:30 PM - Lunch", "1:30 PM - Meetings", "5:00 PM - Exercise", "7:00 PM - Dinner", "8:00 PM - Socializing", "10:00 PM - Bedtime"],
+
+  Thursday: ["8:00 AM - Wake up", "8:30 AM - Breakfast", "9:00 AM - Work", "12:30 PM - Lunch", "1:30 PM - Meetings", "5:00 PM - Exercise", "7:00 PM - Dinner", "8:00 PM - Learning", "10:00 PM - Bedtime"],
+
+  Friday: ["8:00 AM - Wake up", "8:30 AM - Breakfast", "9:00 AM - Work", "12:30 PM - Lunch", "1:30 PM - Meetings", "5:00 PM - Exercise", "7:00 PM - Dinner", "8:00 PM - Relaxation", "10:00 PM - Bedtime"],
+
+  Saturday: ["9:00 AM - Wake up", "9:30 AM - Breakfast", "10:00 AM - Exercise", "12:30 PM - Lunch", "1:30 PM - Hobbies", "5:00 PM - Relaxation", "7:00 PM - Dinner", "8:00 PM - Socializing", "11:00 PM - Bedtime"],
+
+  Sunday: ["9:00 AM - Wake up", "9:30 AM - Breakfast", "10:00 AM - Relaxation", "12:30 PM - Lunch", "1:30 PM - Family time", "5:00 PM - Outdoor activities", "7:00 PM - Dinner", "8:00 PM - Planning for the week ahead", "10:00 PM - Bedtime"]
+
+};
+
+function getSchedule(day) {
+
+  if (schedule.hasOwnProperty(day)) {
+
+    return schedule[day];
+
+  } else {
+
+    return "No schedule found for the given day.";
+
+  }
+
+}
+
+// Example usage
+
+const day = "Monday";
+
+const dailySchedule = getSchedule(day);
+
+console.log(`Daily Schedule for ${day}:`);
+
+dailySchedule.forEach((item) => console.log(item));
